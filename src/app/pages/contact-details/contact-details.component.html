@@ -1,0 +1,16 @@
+<section class="container" *ngIf="contact">
+    <div class="">
+        <a (click)="goBack()" class="btn">Back</a>
+        <a routerLink="/contact/edit/{{contact._id}}" class="btn">Edit Contact Details</a>
+    </div>
+    <div class="">
+        <img class="contact-img" src="{{contact.img}}" alt="" />
+        <div>
+            <h3>Name: {{contact.name}}</h3>
+            <h3>Phone: {{contact.phone}}</h3>
+            <h3>Email: {{contact.email}}</h3>
+        </div>
+    </div>
+    <!-- <transfer-fund [contact]="contact" (addMove)="addMove($event)" ></transfer-fund> -->
+    <!-- <move-list [moves]="movesToContact" [title]="'Your Moves'" ></move-list> -->
+</section>

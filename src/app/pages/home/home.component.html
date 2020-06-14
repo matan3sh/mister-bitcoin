@@ -1,0 +1,9 @@
+<section class="wrapper">
+    <div class="card-container">
+        <div class="card">
+            <h1>Hello {{user.name}}</h1>
+            <h3 class="card-text"><i class="fab fa-bitcoin"></i> BTC : <span>{{user.coins}}</span></h3>
+            <h3 class="card-text" *ngIf="usd"><i class="fas fa-coins"></i> USD : <span>{{usd}}</span></h3>
+        </div>
+    </div>
+</section>

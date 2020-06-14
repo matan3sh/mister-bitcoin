@@ -1,0 +1,26 @@
+.contact-card {
+  border: #ccc 1px dotted;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px -6px rgba(0, 0, 0, 0.75);
+}
+
+.contact-card img {
+  border-radius: 50%;
+  width: 20%;
+  flex: 1;
+}
+
+.contact-title {
+  flex: 10;
+  margin: auto;
+}
+
+.contact-card h4 {
+  font-size: 0.8rem;
+  color: #888;
+}

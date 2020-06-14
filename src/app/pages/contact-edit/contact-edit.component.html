@@ -1,0 +1,12 @@
+<section class="container" *ngIf="contact">
+    <div>
+        <div (click)="goBack()" class="btn">Back</div>
+        <div *ngIf="contact._id" (click)="removeContact()">Delete This Contact</div>
+    </div>
+    <form (ngSubmit)="saveContact()" class="form">
+            <input type="text" [(ngModel)]="contact.name" name="name" placeholder="Contact Name"/>
+            <input type="text" [(ngModel)]="contact.phone" name="phone" placeholder="Contact Phone"/>
+            <input type="email" [(ngModel)]="contact.email" name="email" placeholder="Contact Email"/>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</section>

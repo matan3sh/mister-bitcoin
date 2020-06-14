@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mister-bitcoin"
+    }
+  },
+  "defaultProject": "mister-bitcoin",
+  "cli": {
+    "analytics": false
+  }
 }
