@@ -1,5 +1,5 @@
 .header {
-  background: #333;
+  background: #294053;
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -8,4 +8,9 @@
 .header a {
   color: #fff;
   text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.header i {
+  color: rgb(231, 197, 0);
 }

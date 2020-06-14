@@ -1,0 +1,9 @@
+.Chart {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 350px;
+  height: 300px;
+  margin: 4rem auto;
+}

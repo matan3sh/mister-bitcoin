@@ -1,0 +1,13 @@
+.form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+.form button {
+  width: 100%;
+  margin: 1rem 0;
+}

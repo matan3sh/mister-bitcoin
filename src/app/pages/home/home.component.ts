@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { BitcoinService } from '../../services/bitcoin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,11 +14,15 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private bitcoinService: BitcoinService
+    private bitcoinService: BitcoinService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe((user) => (this.user = user));
+    this.userService.getUser().subscribe((user) => {
+      if (!user) return this.router.navigateByUrl('/signup');
+      else this.user = user;
+    });
     this.bitcoinService.getRate().subscribe((rate) => (this.rate = rate));
   }
 

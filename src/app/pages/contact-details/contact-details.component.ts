@@ -32,4 +32,14 @@ export class ContactDetailsComponent implements OnInit {
   goBack() {
     this.location.back();
   }
+
+  addMove(amount) {
+    this.userService.addMove(this.contact, amount);
+  }
+
+  get movesToContact() {
+    const { moves } = this.user;
+    if (!moves || !moves.length) return;
+    return moves.filter((move) => move.toId === this.contact._id);
+  }
 }

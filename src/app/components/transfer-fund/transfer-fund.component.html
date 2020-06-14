@@ -1,0 +1,6 @@
+<section class="card">
+    <form (ngSubmit)="addMove()" class="form">
+        <div>Amount: <input type="number" min="1" [(ngModel)]="amount" name="amount" /></div>
+        <button class="btn" type="submit">Transfer</button>
+    </form>
+</section>

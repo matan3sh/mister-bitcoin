@@ -1,0 +1,22 @@
+.form input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+}
+
+.form button {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.card {
+  margin: 1rem auto;
+  border: #ccc 1px double;
+  box-shadow: 0px 6px 10px -6px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 0.8rem;
+  width: 100%;
+}

@@ -12,6 +12,9 @@ import { ContactPreviewComponent } from './components/contact-preview/contact-pr
 import { ContactDetailsComponent } from './pages/contact-details/contact-details.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
+import { ChartComponent } from './components/chart/chart.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { TransferFundComponent } from './components/transfer-fund/transfer-fund.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { ContactEditComponent } from './pages/contact-edit/contact-edit.componen
     ContactDetailsComponent,
     NavbarComponent,
     ContactEditComponent,
+    ChartComponent,
+    SignUpComponent,
+    TransferFundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

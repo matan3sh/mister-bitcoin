@@ -1,4 +1,10 @@
 .add-contact {
+  position: absolute;
+  top: -10px;
+}
+
+.contact-list {
   position: relative;
-  top: 15px;
+  width: 80%;
+  margin: auto;
 }

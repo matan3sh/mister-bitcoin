@@ -20,4 +20,27 @@ export class UserService {
     }
     return of(this.user);
   }
+
+  signup(name) {
+    this.user = {
+      name,
+      coins: 100,
+      moves: [],
+    };
+    this.storageService.saveToStorage(KEY, this.user).subscribe();
+    return of(this.user);
+  }
+
+  addMove(contact, amount) {
+    if (!this.user) this.user = this.storageService.loadFromStorage(KEY);
+    this.user.moves.unshift({
+      toId: contact._id,
+      to: contact.name,
+      at: Date.now(),
+      amount,
+    });
+    this.user.coins -= amount;
+    this.storageService.saveToStorage(KEY, this.user);
+    return of(this.user);
+  }
 }
