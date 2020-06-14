@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,8 +14,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ContactPageComponent, ContactListComponent, ContactPreviewComponent, ContactDetailsComponent, NavbarComponent, ContactEditComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ContactPageComponent,
+    ContactListComponent,
+    ContactPreviewComponent,
+    ContactDetailsComponent,
+    NavbarComponent,
+    ContactEditComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -3,8 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ContactService } from '../../services/contact.service';
 import { Router } from '@angular/router';
+
 @Component({
-  selector: 'app-contact-edit',
+  selector: 'contact-edit',
   templateUrl: './contact-edit.component.html',
   styleUrls: ['./contact-edit.component.css'],
 })
@@ -18,7 +19,7 @@ export class ContactEditComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.route.params.subscribe((params) => {
       if (!params.id)
         return (this.contact = this.contactService.getEmptyContact());

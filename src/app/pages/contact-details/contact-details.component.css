@@ -1,0 +1,31 @@
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  margin: auto;
+  flex-direction: column;
+}
+
+.contact-img {
+  margin: 1rem 0;
+  width: 100px;
+}
+
+.contact-spec {
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.contact-spec span {
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.contact-spec h3 {
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}

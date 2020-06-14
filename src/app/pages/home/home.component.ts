@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.userService.getUser().subscribe((user) => (this.user = user));
     this.bitcoinService.getRate().subscribe((rate) => (this.rate = rate));
-    console.log(this.user);
   }
 
   get usd() {

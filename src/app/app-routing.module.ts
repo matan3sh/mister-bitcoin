@@ -9,11 +9,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'contact', component: ContactPageComponent },
   { path: 'contact/edit', component: ContactEditComponent, pathMatch: 'full' },
-  {
-    path: 'contact/edit/:id',
-    component: ContactEditComponent,
-    pathMatch: 'full',
-  },
+  { path: 'contact/edit/:id', component: ContactEditComponent },
   { path: 'contact/:id', component: ContactDetailsComponent },
 ];
 

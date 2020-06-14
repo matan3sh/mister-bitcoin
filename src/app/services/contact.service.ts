@@ -1,13 +1,24 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
+import { StorageService } from './storage.service';
+
+const CONTACTS_KEY = 'contacts';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ContactService {
-  constructor() {}
+  constructor(private storageService: StorageService) {}
 
   getContacts() {
+    this.storageService
+      .loadFromStorage(CONTACTS_KEY)
+      .subscribe((contactsFromStorage) => {
+        if (contactsFromStorage !== null) {
+          contacts = contactsFromStorage;
+        }
+      });
+    this.storageService.saveToStorage(CONTACTS_KEY, contacts);
     return of(contacts);
   }
 
@@ -19,6 +30,7 @@ export class ContactService {
   removeContact(id) {
     const idx = contacts.findIndex((contact) => contact._id === id);
     if (idx !== -1) contacts.splice(idx, 1);
+    this.storageService.saveToStorage(CONTACTS_KEY, contacts);
     return of(contacts);
   }
 
@@ -41,16 +53,17 @@ export class ContactService {
     if (index !== -1) {
       contacts[index] = contact;
     }
+    this.storageService.saveToStorage(CONTACTS_KEY, contacts);
     return of(contact);
   }
 
   _addContact(contact) {
     contact._id = _makeId();
-    const gender = Math.random() > 0.5 ? 'men' : 'women';
-    contact.img = `https://randomuser.me/api/portraits/${gender}/${
+    contact.img = `https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/${
       contacts.length + 1
-    }.jpg`;
+    }.png`;
     contacts.push(contact);
+    this.storageService.saveToStorage(CONTACTS_KEY, contacts);
     return of(contact);
   }
 }
@@ -65,7 +78,7 @@ function _makeId(length = 10) {
   return txt;
 }
 
-const contacts = [
+var contacts = [
   {
     _id: '5a56640269f443a5d64b32ca',
     name: 'Ochoa Hyde',

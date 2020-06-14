@@ -1,7 +1,7 @@
 <section class="container" *ngIf="contact">
-    <div>
-        <div (click)="goBack()" class="btn">Back</div>
-        <div *ngIf="contact._id" (click)="removeContact()">Delete This Contact</div>
+    <div class="buttons">
+        <a (click)="goBack()"><i class="fas fa-caret-square-left fa-2x"></i></a>
+        <a *ngIf="contact._id" (click)="removeContact()"><i class="fas fa-trash-alt fa-2x"></i></a>
     </div>
     <form (ngSubmit)="saveContact()" class="form">
             <input type="text" [(ngModel)]="contact.name" name="name" placeholder="Contact Name"/>

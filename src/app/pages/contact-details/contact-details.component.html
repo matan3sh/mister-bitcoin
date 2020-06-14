@@ -1,14 +1,14 @@
 <section class="container" *ngIf="contact">
-    <div class="">
-        <a (click)="goBack()" class="btn">Back</a>
-        <a routerLink="/contact/edit/{{contact._id}}" class="btn">Edit Contact Details</a>
+    <div class="buttons">
+        <a (click)="goBack()"><i class="fas fa-caret-square-left fa-2x"></i></a>
+        <a routerLink="/contact/edit/{{contact._id}}"><i class="fas fa-pen-square fa-2x"></i></a>
     </div>
-    <div class="">
+    <div class="contact-details">
         <img class="contact-img" src="{{contact.img}}" alt="" />
-        <div>
-            <h3>Name: {{contact.name}}</h3>
-            <h3>Phone: {{contact.phone}}</h3>
-            <h3>Email: {{contact.email}}</h3>
+        <div class="contact-spec">
+            <h3><span>Name:</span>  {{contact.name}}</h3>
+            <h3><span>Phone:</span> {{contact.phone}}</h3>
+            <h3><span>Email:</span> {{contact.email}}</h3>
         </div>
     </div>
     <!-- <transfer-fund [contact]="contact" (addMove)="addMove($event)" ></transfer-fund> -->
